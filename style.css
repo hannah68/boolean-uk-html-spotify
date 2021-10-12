@@ -26,7 +26,6 @@ header{
     left: 0;
     background-color: #111;
     overflow-x: hidden; 
-    padding-top: 20px;
     padding: 2rem;
 }
 .sidenav{
@@ -61,8 +60,10 @@ header{
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #fff;
+    text-decoration: none;
+    padding-bottom: 1rem;
 }
-.sidenav a{
+.sidenav a:not(:first-child){
     color: #a6a6a6;
     text-decoration: none;
     padding-bottom: 1rem;
@@ -108,13 +109,12 @@ main{
     font-size: 2rem;
     width: 100%;
     background-color: #222833;
-    /* background-color: yellow; */
     padding: 2rem;
     position: fixed;
     top: 0;
     overflow-x: hidden;
-    /* display: flex;
-    justify-content: flex-end; */
+    display: flex;
+    justify-content: center;
 }
 
 .nav button{
@@ -125,6 +125,8 @@ main{
     width: 10rem;
     padding: 1rem 2rem;
     text-transform: uppercase;
+
+    margin-left: 110rem;
     
     /* position: absolute;
     right: 2rem;
@@ -150,7 +152,7 @@ main{
     background-color:#008000;
     position: absolute;
     top: 3rem;
-    right: 3rem;
+    right: 2rem;
     border-radius: 5px;
 }
 
@@ -216,6 +218,15 @@ main{
 
 .created-songs-row title{
     grid-row: 1/2;
+}
+
+.title h2{
+    font-size: 2rem;
+}
+
+.title p{
+    font-size: 1.5rem;
+    color: gray;
 }
 
 .created-songs-row h2{
