@@ -460,10 +460,6 @@ footer{
     border-radius: 1rem;
 }
 
-/* media query */
-/* @media screen and (max-width:820px){
-
-} */
 
 @media screen and (max-height:634px){
     .install{
