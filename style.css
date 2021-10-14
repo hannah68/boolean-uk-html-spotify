@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 :root{
-    --header-color:#292929;
+    --header-color:#0D0F14;
     --main-color:#151921;
-    --footer-color:#414141;
+    --footer-color:#181818;
     --sidebar-color: #000;
     --grey-color: #808080;
     --white-color: #fff;
 }
-
+/* #414141 */
 *,
 *::before,
 *::after{
@@ -72,8 +72,6 @@ header button:hover{
     top: 0;
     left: 0;
     z-index: 99;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .sidebar,
@@ -99,7 +97,7 @@ header button:hover{
 }
 
 .pages{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .pages img,
@@ -115,6 +113,9 @@ header button:hover{
 .playlists a{
     text-decoration: none;
     color: var(--grey-color);
+}
+
+.playlists li{
     padding-bottom: 1rem;
 }
 
@@ -125,6 +126,8 @@ header button:hover{
 
 .playlists{
     position: relative;
+    /* overflow: hidden;
+    overflow-y: auto; */
 }
 .plus-btn{
     display: flex;
@@ -541,13 +544,16 @@ footer{
 }
 
 /* /////////// 634px//////////////// */
-@media screen and (max-height:634px){
+@media screen and (max-height:766px){
     .install{
         z-index: 99;
         background-color: var(--sidebar-color);
-        bottom: 10rem;
         left: 0;
         padding-left: 2rem;
+    }
+
+    .playlists{
+        overflow-y: auto;
     }
 }
 
