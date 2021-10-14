@@ -38,6 +38,7 @@ header{
     position: fixed;
     top: 0;
     z-index: 99;
+    overflow: hidden;
 }
 
 header button{
@@ -71,6 +72,8 @@ header button:hover{
     top: 0;
     left: 0;
     z-index: 99;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     display: flex;
     flex-direction: column;
@@ -78,12 +81,18 @@ header button:hover{
 
 .logo h1{
     margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.logo i{
+    font-size: 3rem;
 }
 
 .pages{
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+    list-style: none;
 }
 
 .pages img,
@@ -110,7 +119,7 @@ header button:hover{
 .playlists{
     display: flex;
     flex-direction: column;
-
+    list-style: none;
     position: relative;
 }
 .plus-btn{
@@ -131,22 +140,33 @@ header button:hover{
     width: 100%;
     font-size: 2rem;
     padding-right: 1rem;
+    list-style: none;
     z-index: 99;
 }
 
 .app-install{
-    color: var(--grey-color);
-    background-color: transparent;
-    border: none;
-    outline: none;
     border-bottom: 1px solid var(--white-color);
     width: 90%;
     text-align: left;
     padding: 1rem 0;
-    font-size: 1.5rem;
+    display: flex;
 }
 
+.app-install img{
+    width: 3rem;
+    padding-right: 1rem;
+}
 
+.app-btn{
+    color: var(--grey-color);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.app-btn:hover{
+    color: var(--white-color);
+}
 
 
 /* main section =====================================*/
@@ -189,6 +209,10 @@ main{
     color: #a6a6a6;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.top-group a:hover{
+    color: var(--white-color);
 }
 
 /* grid song section ============================*/
@@ -462,6 +486,112 @@ footer{
 }
 
 
+@media screen and (max-width:932px){
+    .pages li a,
+    .playlists,
+    .logo h1,
+    .app-install button,
+    .profile span{
+        display: none;
+    }
+
+    .app-install{
+        border-bottom: none;
+    }
+
+    .sidebar{
+        width: 6rem;
+    }
+    main{
+        margin-left: 6rem;
+    }
+
+    footer{
+        grid-template-columns: .5fr max-content .5fr;
+        font-size: 1rem;
+    }
+
+    .footer-left .cover-img{
+        margin-right: 1rem;
+        align-items: center;
+    }
+    .cover-img p{
+        font-size: 1rem;
+    }
+    .volume-setting {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:784px){
+    .line .play-line{
+        width: 15rem;
+    }
+    .volume-setting .volume-line {
+        width: 7rem;
+    }
+    .like-icon i, .play-icons i, .volume-setting i{
+        font-size: 1.2rem;
+    }
+    .fa-play-circle{
+        font-size: 1.5rem !important;
+    }
+    .top-group a {
+        font-size: 1.2rem;
+    }
+    .cover-img img {
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width:522px){
+    footer{
+        display: none;
+    }
+    .sidebar{
+        width: 100%;
+        height: 10rem;
+        top: 90%;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .pages{
+        flex-direction: row;
+        margin-right: 2rem;
+    }
+    .pages li{
+        margin-right: 2rem;
+    }
+    .pages img{
+        width: 3rem;
+    }
+    main{
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width:411px){
+    .albums{
+        justify-content: center;
+    }
+    .recently-played-row h2{
+        text-align: center;
+    }
+    .title{
+        text-align: center;
+    }
+    .top-group{
+        margin: 2rem;
+    }
+    .top-group a{
+        font-size: 1rem;
+    }
+    .underline::after{
+        right: 5px;
+        top: 2rem;
+    }
+}
 @media screen and (max-height:634px){
     .install{
         z-index: 99;
