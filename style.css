@@ -540,6 +540,18 @@ footer{
     }
 }
 
+/* /////////// 634px//////////////// */
+@media screen and (max-height:634px){
+    .install{
+        z-index: 99;
+        background-color: var(--sidebar-color);
+        bottom: 10rem;
+        left: 0;
+        padding-left: 2rem;
+    }
+}
+
+
 /* /////////// 522px//////////////// */
 @media screen and (max-width:522px){
     footer{
@@ -568,8 +580,8 @@ footer{
     
 }
 
-/* /////////// 411px//////////////// */
-@media screen and (max-width:411px){
+/* /////////// 417px//////////////// */
+@media screen and (max-width:417px){
     .albums{
         justify-content: center;
     }
@@ -588,16 +600,6 @@ footer{
     .underline::after{
         right: 5px;
         top: 2rem;
-    }
-}
-/* /////////// 634px//////////////// */
-@media screen and (max-height:634px){
-    .install{
-        z-index: 99;
-        background-color: var(--sidebar-color);
-        bottom: 10rem;
-        left: 0;
-        padding-left: 2rem;
     }
 }
 
