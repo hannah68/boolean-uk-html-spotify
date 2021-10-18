@@ -65,7 +65,7 @@ header button:hover{
     background-color: var(--sidebar-color);
     font-size: 2rem;
     width: 25rem;
-    height: 100%;
+    height: calc(100vh - 12rem);
     padding: 1rem 2rem;
 
     position: fixed;
@@ -83,10 +83,14 @@ header button:hover{
 
 .pages,
 .playlists,
-.install{
+.install,
+.lists{
     list-style: none;
 }
-
+.lists{
+    overflow-y: auto;
+    height: 40vh;
+}
 .logo h1{
     margin-bottom: 1.5rem;
     display: inline-block;
@@ -126,8 +130,6 @@ header button:hover{
 
 .playlists{
     position: relative;
-    /* overflow: hidden;
-    overflow-y: auto; */
 }
 .plus-btn{
     display: flex;
@@ -143,13 +145,12 @@ header button:hover{
 
 .install{
     position: absolute;
-    bottom: 12rem;
+    bottom: 0;
     width: 100%;
     font-size: 2rem;
     padding-right: 1rem;
     z-index: 99;
 }
-
 .app-install{
     border-bottom: 1px solid var(--white-color);
     width: 90%;
@@ -431,7 +432,16 @@ footer{
     transition: background-color .2s ease;
 }
 
-.play-line::after{
+.play-circle{
+    position: absolute;
+    bottom: -4px;
+    left: 30%;
+    background-color: var(--white-color);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+/* .play-line::after{
     content: "";
     position: absolute;
     bottom: -4px;
@@ -441,9 +451,8 @@ footer{
     height: 1.5rem;
     border-radius: 50%;
 
-    /* visibility: hidden;
-    opacity: 0; */
-}
+    
+} */
 
 .play-line:hover::before{
     background-color: #00b300;  
@@ -550,10 +559,10 @@ footer{
         background-color: var(--sidebar-color);
         left: 0;
         padding-left: 2rem;
-    }
+    } 
 
-    .playlists{
-        overflow-y: auto;
+    .lists{
+        height: 30vh;
     }
 }
 
@@ -569,6 +578,9 @@ footer{
         top: 90%;
         flex-direction: row-reverse;
         justify-content: center;
+    }
+    .install{
+        display: none;
     }
     .pages{
         flex-direction: row;
