@@ -8,7 +8,7 @@
     --grey-color: #808080;
     --white-color: #fff;
 }
-/* #414141 */
+
 *,
 *::before,
 *::after{
@@ -270,23 +270,8 @@ main{
 }
 
 .top-song i{
-    position: absolute;
-    top: 30%;
-    right: 1rem;
-    font-size: 2rem;
-    color: var(--white-color);
-    background-color: #00b300;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    padding: 1rem;
-    text-align: center;
-    place-items: center;
-    box-shadow:0 3px 8px rgba(0, 0, 0, .3);border:0 solid;
-
-    transition: all .2s ease-in;
-    visibility: hidden;
-    opacity: 0;
+    top: 30% !important;
+    right: 1rem !important;
 }
 
 .top-song:hover i{
@@ -311,7 +296,7 @@ main{
     grid-row: 1/2;
     font-size: 2rem;
 }
-/* row2 */
+/* row3 */
 .created-songs-row{
     display: grid;
     grid-template-rows: 4rem 1fr;
@@ -335,7 +320,7 @@ main{
 .created-songs-row h2{
     font-size: 2rem;
 }
-/* row3 */
+/* row4 */
 .popular-artist-row{
     display: grid;
     grid-template-rows: 4rem 1fr;
@@ -372,7 +357,8 @@ main{
     opacity: 1;
 }
 
-.album i{
+.album i,
+.top-song i{
     position: absolute;
     top: 50%;
     right: -1rem;
@@ -435,7 +421,7 @@ footer{
     margin-right: 2rem;
 }
 .cover-img p{
-   font-size: 1.5rem; 
+   font-size: 1.5rem;
 }
 
 .cover-img p:hover{
@@ -488,7 +474,6 @@ footer{
     background-color:var(--grey-color) ;
     position: relative;
     border-radius: 1rem;
-    
 }
 
 .white-bar{
@@ -583,9 +568,20 @@ footer{
     .app-install{
         border-bottom: none;
     }
-
+    header span{
+        margin-left: 5rem;
+    }
     .sidebar{
         width: 6rem;
+    }
+    .logo{
+        margin-bottom: 2rem;
+    }
+    .logo i{
+        font-size: 2.5rem;
+    }
+    .pages li{
+        margin-bottom: 1rem;
     }
     main{
         margin-left: 6rem;
@@ -616,14 +612,11 @@ footer{
     .volume-setting .volume-line {
         width: 7rem;
     }
-    .like-icon i, .play-icons i, .volume-setting i{
+    .like-icon i, .play-icons i, .volume-setting i, .top-group a {
         font-size: 1.2rem;
     }
     .fa-play-circle{
         font-size: 1.5rem !important;
-    }
-    .top-group a {
-        font-size: 1.2rem;
     }
     .cover-img img {
         width: 4rem;
@@ -641,6 +634,15 @@ footer{
 
     .lists{
         height: 30vh;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-middle .play-icons,
+    .footer-middle .line,
+    .footer-right,
+    .footer-right .volume-setting{
+        gap: 1rem;
     }
 }
 
@@ -673,7 +675,13 @@ footer{
     main{
         margin-left: 0;
     }
-    
+}
+
+/* /////////// 444px//////////////// */
+@media screen and (max-width:444px){
+    .top-song-container{
+        grid-template-columns: repeat(auto-fit,30rem);
+    }
 }
 
 /* /////////// 417px//////////////// */
@@ -681,9 +689,11 @@ footer{
     .albums{
         justify-content: center;
     }
-    .recently-played-row h2{
-        text-align: center;
+    .top-song-container{
+        justify-content: center;
     }
+    .recently-played-row h2,
+    .good-morning-row h2,
     .title{
         text-align: center;
     }
@@ -696,6 +706,19 @@ footer{
     .underline::after{
         right: 5px;
         top: 2rem;
+    }
+    header span{
+        margin-left: 0;
+    }
+    .top-group a{
+        margin-right: 1rem;
+    }
+}
+
+/* /////////// 280px//////////////// */
+@media screen and (max-width:280px){
+    .top-song-container{
+        grid-template-columns: repeat(auto-fit,20rem);
     }
 }
 
