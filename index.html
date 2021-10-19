@@ -12,8 +12,11 @@
     <!-- header -->
     <header>
         <button>upgrade</button>
+        <span>
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+        </span>
     </header>
-
     <!-- sidebar section ---------------------->
     <section class="sidebar">
         <!-- logo -->
@@ -60,15 +63,12 @@
                 <img src="./images/download.svg" alt="download img">
                 <button class="app-btn">Install app</button>
             </li>
-            
-            
             <li class="profile">
                 <img src="./images/profile.svg" alt="profile img">
                 <span>Hannah Nd</span>
             </li>
         </div>
     </section>
-
     <!-- main section ------------------------------------->
     <main>
         <div class="top-group">
@@ -79,10 +79,32 @@
             <a href="#">brand new</a>
             <a href="#">discover</a>
         </div>
-
         <!-- songs section -->
         <section class="songs-container">
             <!-- row1 -->
+            <div class="good-morning-row">
+                <h2>Good morning</h2>
+                <div class="top-song-container">
+                    <div class="top-song">
+                        <img src="./images/stress.jpeg" alt="cover pic">
+                        <i class="fas fa-play"></i>
+                        <p>Stress Relief</p>
+                    </div>
+
+                    <div class="top-song">
+                        <img src="./images/artist.jpeg" alt="cover pic">
+                        <i class="fas fa-play"></i>
+                        <p>Faramarz Aslani</p>
+                    </div>
+
+                    <div class="top-song">
+                        <img src="./images/adele.jpeg" alt="cover pic">
+                        <i class="fas fa-play"></i>
+                        <p>Adele</p>
+                    </div>
+                </div>
+            </div>
+            <!-- row2 -->
             <div class="recently-played-row">
                 <h2>Recently Played</h2>
                 <div class="albums">
@@ -235,6 +257,7 @@
             <div class="line">
                 <span>0:25</span>
                 <div class="play-line">
+                    <div class="white-bar"></div>
                     <div class="play-circle"></div>
                 </div>
                 <span>4:35</span>
@@ -246,7 +269,10 @@
                 <span><i class="fas fa-list-ul"></i></span>
                 <span><i class="fas fa-tv"></i></span>
                 <span><i class="fas fa-volume-up"></i></span>
-                <div class="volume-line"></div>
+                <div class="volume-line">
+                    <div class="volume-bar"></div>
+                    <div class="volume-circle"></div>
+                </div>
             </div>
         </div>
     </footer>
